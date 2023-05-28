@@ -31,7 +31,10 @@ class LogoffPage extends PageBase {
          return this.waitAndReturnElement(logoffInformationLocator).getText();
     }
 
-    
+    public String getTitle()
+    {
+        return this.driver.getTitle();
+    }
     
 
 }

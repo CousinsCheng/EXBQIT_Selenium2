@@ -34,15 +34,18 @@ public class SeleniumTest {
         assertTrue(mainpage.getTitle().contains("King & Country - Finest Toy Soldiers, Historical Miniatures, Military Figurines Producer"));
 
         LoginPage res = mainpage.openLoginPage();
+        assertTrue(res.getTitle().contains("Please Sign In | King & Country"));
         //System.out.println(res.getBodyText());
 
 
         AccountPage res2 =  res.login();
+        assertTrue(res2.getBodyText().contains("My Account Information"));
         //System.out.println(res2.headerpage());
         //System.out.println(res2.getBodyText());
 
         LogoffPage res3 = res2.logout();
         System.out.println(res3.headerpage());
+        assertTrue(res3.headerpage().contains("You have been logged off your account. It is now safe to leave the computer."));
         
         
 

@@ -39,4 +39,9 @@ class LoginPage extends PageBase {
          return new AccountPage(this.driver);
 
     }
+
+    public String getTitle()
+    {
+        return this.driver.getTitle();
+    }
 }
